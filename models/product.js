@@ -21,11 +21,13 @@ const productSchema = new mongoose.Schema(
             required: true,
             maxlength: 32
         },
-        category: {
-            type: ObjectId,
-            ref: "Category",
-            required: true
-        },
+        category: [
+            {
+                type: ObjectId,
+                ref: "Category",
+                required: true
+            }
+        ],
         quantity: {
             type: Number,
         },

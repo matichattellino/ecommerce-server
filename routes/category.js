@@ -15,4 +15,4 @@ router.get("/categories", listCategory);
 router.param("categoryId", categoryById)
 router.param("userId", userById); 
 
-module.exports = router;
+module.exports = router;        

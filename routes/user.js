@@ -16,4 +16,4 @@ router.put("/user/:userId", requireSignin, isAuth, updateUserInformation)
 
 router.param("userId", userById)
 
-module.exports = router;
+module.exports = router; 

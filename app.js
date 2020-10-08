@@ -1,11 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
+var cors = require('cors')
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const expressValidator = require("express-validator");
-app.use(cors());
+
 
 //import routes
 const authRoutes = require('./routes/auth');
@@ -15,6 +16,8 @@ const productRoutes = require("./routes/product");
 
 //app
 const app = express();
+
+app.use(cors());
 
 //database
 mongoose.connect(process.env.DATABASE, {
